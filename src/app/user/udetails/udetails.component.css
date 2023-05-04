@@ -1,0 +1,70 @@
+.container {
+  border: none;
+}
+.profile {
+  margin-top: 5px;
+  border: solid grey 1px;
+  height: 600px;
+  width: 250px;
+  margin-left: 5px;
+}
+img {
+  height: 200px;
+  width: 200px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.page {
+  border: solid grey 1px;
+  margin-left: 275px;
+  margin-top: -600px;
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+input {
+  height: 50px;
+  width: 450px;
+  margin-left: 80px;
+  border-bottom: 1px solid grey;
+  
+}
+
+h2 {
+  margin-left: 20px;
+}
+.calender{
+
+    width: 200px;
+    margin-left: 80px;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+.gender{
+    margin-left: 350px;
+    margin-top: -46px;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+.Country{
+    margin-left: 80px;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+.mobile{
+    margin-left: 300px;
+    margin-top: 20px;
+    margin-top: -83px;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+.bio{
+    margin-left: 80px;
+    border: none;
+    border-bottom: 1px solid grey; 
+}
+h3{
+    margin-left:50px ;
+}

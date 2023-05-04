@@ -1,0 +1,179 @@
+<div class="container">
+  <form [formGroup]="formdata" (ngSubmit)="onClickSubmit()">
+    <div class="table">
+      
+      <button 
+          pButton
+          class="p-button.p-button-outlined2"
+          type="button"
+          label="View Table"
+          class="p-button-outlined"
+          (click)="display()"
+          (click)="closeDisplay()"
+          
+        ></button>
+     <span *ngIf="view==true">
+      <p-table [value]="list" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Gender</th>
+            <th>Date Of Birth</th>
+            <th>Mobile</th>
+            <th>Email</th>
+            <th>City</th>
+            <th>University</th>
+            <th>Stream</th>
+            <th>Degree</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+          <tr>
+            <td>{{ product.fname }}</td>
+            <td>{{ product.lname }}</td>
+            <td>{{ product.gender }}</td>
+            <td>{{ product.calender }}</td>
+            <td>{{ product.mobile }}</td>
+            <td>{{ product.email }}</td>
+            <td>{{ product.city }}</td>
+            <td>{{ product.uniCity }}</td>
+            <td>{{ product.stream }}</td>
+            <td>{{ product.degree }}</td>
+            <td>
+              <i class="pi pi-pencil" (click)="edit(product.id)"></i>
+            </td>
+            <td>
+              <i class="pi pi-trash" (click)="deleteUser(product.id)"></i>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </span>
+    </div>
+    <div class="page">
+      <h2 style="margin-left: 230px; color: tomato">Student Details Form</h2>
+      <div class="name">
+        <span class="p-float-label">
+          <input
+            id="float-input"
+            type="text"
+            name="fname"
+            formControlName="fname"
+            pInputText
+          />
+          <label for="float-input">Firstname</label>
+        </span>
+        <span class="p-float-label" style="margin-left: 20px">
+          <input
+            id="float-input"
+            type="text"
+            name="lname"
+            formControlName="lname"
+            pInputText
+          />
+          <label for="float-input">Lastname</label>
+        </span>
+      </div>
+      <div class="dropDown">
+        <span>
+          <p-dropdown
+            class="city"
+            [options]="cities"
+            [(ngModel)]="selectedCity"
+            optionLabel="name"
+            optionValue="name"
+            formControlName="city"
+          ></p-dropdown>
+        </span>
+        <span>
+          <p-dropdown
+            class="gen"
+            [options]="gender"
+            [(ngModel)]="selectedGen"
+            optionLabel="name"
+            optionValue="name"
+            formControlName="gender" 
+          ></p-dropdown>
+        </span>
+        <span> </span>
+        <span>
+          <div class="calender">
+            <p-calendar
+              [(ngModel)]="date3"
+              [showIcon]="true"
+              placeholder="Date Of Birth"
+              formControlName="calender"
+              inputId="icon"
+            ></p-calendar>
+          </div>
+        </span>
+      </div>
+      <div class="contact">
+        <span class="p-float-label">
+          <input
+            id="float-input"
+            type="text"
+            name="mobile"
+            formControlName="mobile"
+            pInputText
+          />
+          <label for="float-input">Mobile</label>
+        </span>
+        <span class="p-float-label" style="margin-left: 20px">
+          <input
+            id="float-input"
+            type="text"
+            name="email"
+            formControlName="email"
+            pInputText
+          />
+          <label for="float-input">Email</label>
+        </span>
+      </div>
+      <div class="college">
+        <span>
+          <p-dropdown
+            class="gen"
+            [options]="universities"
+            [(ngModel)]="selectedUni"
+            optionLabel="name"
+            optionValue="name"
+            formControlName="uniCity"
+          ></p-dropdown>
+        </span>
+        <span>
+          <p-dropdown
+            class="gen"
+            [options]="eduStream"
+            [(ngModel)]="selectedStream"
+            optionLabel="name"
+            optionValue="name"
+            formControlName="stream"
+          ></p-dropdown>
+        </span>
+        <span>
+          <p-dropdown
+            class="gen"
+            [options]="degree"
+            [(ngModel)]="selectedDegree"
+            optionLabel="name"
+            optionValue="name"
+            formControlName="degree"
+          ></p-dropdown>
+        </span>
+      </div>
+      <div class="submit">
+        <span *ngIf="updated==false">
+          <button
+          pButton
+          type="submit"
+          label="Submit"
+          class="p-button-outlined"
+        ></button>
+        </span>
+        
+      </div>
+    </div>
+  </form>
+</div>

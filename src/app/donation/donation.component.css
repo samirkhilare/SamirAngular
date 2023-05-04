@@ -1,0 +1,26 @@
+.container{
+    height: auto;
+    width: 500px;
+    border: 1px solid green;
+    border-radius: 5px;
+    margin-left: 200px;
+    margin-top: 50px;
+}
+.page{
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+h2{
+    margin-left: 160px;
+}
+input{
+    height: 50px;width: 460px;
+}
+button{
+    height: 50px;
+    width: 200px;
+    margin-left: 130px;
+    margin-bottom: 50px;
+}

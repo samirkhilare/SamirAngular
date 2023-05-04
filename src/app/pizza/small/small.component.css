@@ -1,0 +1,76 @@
+.container{
+    
+    margin-left: 350px;
+    width: 500px;
+    height: 500px;
+    
+}
+.page{
+    
+    width: 500px; 
+    background-color: lightgreen;
+    border: solid black 1px;
+}
+.size{
+    margin-left: 110px;
+    margin-top: 20px;
+    
+}
+.check{
+    margin-top: 50px;
+    display: flex;
+    
+}
+.group1{
+    margin-left: 10px;
+}
+.group2{
+    margin-left: 130px;
+    margin-top: -150px;
+}
+.group3{
+    margin-left: 250px;
+    margin-top: -150px;
+}
+.group4{
+    margin-left: 350px;
+    margin-top: -150px;
+}
+h3{
+    margin-left: 10px;
+}
+.details{
+    margin-left: 0px;
+    margin-top: 0px;
+    
+}
+.c-detail{
+   display: flex; 
+}
+.fullName{
+    border: none;
+    border-bottom: 1px solid grey;
+    height: 40px; width: 100px;
+}
+.lastName{
+    border: none;
+    border-bottom: 1px solid grey;
+    height: 40px; width: 100px;
+}
+.phoneNumber{
+    border: none;
+    border-bottom: 1px solid grey;
+    height: 40px; width: 130px;
+}
+
+.d-details{
+    display: flex; 
+}
+.streetName{
+    border: none;
+    border-bottom: 1px solid grey;
+    height: 40px; width: 160px;
+}
+
+
+

@@ -1,0 +1,137 @@
+<div class="container">
+  <form [formGroup]="Formdata" (ngSubmit)="onClickSubmit()" class="page">
+    <h2>User Registration</h2>
+    <div class="p-float-label">
+      <input
+        id="float-input"
+        name="Fname"
+        formControlName="Fname"
+        type="text"
+        pInputText
+      />
+      <label for="float-input">FirstName</label>
+      <br />
+      <small *ngIf="fname?.invalid && fname?.touched"
+        ><span style="color: tomato">Invalid First Name</span></small
+      >
+    </div>
+    <br /><br />
+    <div class="p-float-label">
+      <input id="float-input" formControlName="Lname" type="text" pInputText />
+      <label for="float-input">LastName</label>
+      <br />
+      <small *ngIf="lname?.invalid && lname?.touched"
+        ><span style="color: tomato">Invalid Last Name</span></small
+      >
+    </div>
+    <br /><br />
+    <span>
+      <div class="p-float-label">
+        <input
+          id="float-input"
+          name="emailid"
+          formControlName="emailid"
+          type="text"
+          pInputText
+        />
+        <label for="float-input">Email-ID</label>
+        <br />
+        <small *ngIf="email?.invalid && email?.touched"
+          ><span style="color: tomato">Invalid Email-ID</span></small
+        >
+      </div>
+    </span>
+    <br /><br />
+    <div class="p-float-label">
+      <input
+        id="float-input"
+        formControlName="passwd"
+        type="password"
+        pInputText
+      />
+      <label for="float-input">Password</label>
+      <br />
+      <small *ngIf="password?.invalid && password?.touched"
+        ><span style="color: tomato">Invalid Password</span></small
+      >
+    </div>
+    <br /><br />
+    <div class="p-float-label">
+      <input
+        id="float-input"
+        formControlName="confpass"
+        type="password"
+        pInputText
+      />
+      <label for="float-input">Confirm Password</label>
+      <br />
+      <small *ngIf="password2?.invalid && password2?.touched"
+        ><span style="color: tomato">Invalid Password</span>
+      </small>
+      <span>{{ Passmatch }}</span>
+    </div>
+    <br />
+    <span *ngIf="updatebtn==false">
+      <button #submited
+      pButton
+      type="submit"
+      label="Submit"
+      [disabled]="!Formdata.valid"
+      class="p-button-outlined"
+    ></button>
+    </span>
+    <span *ngIf="updatebtn==true">
+    <button #updated
+      pButton
+      (click)="updateData(Formdata.value)"
+      type="button"
+      label="Update"
+      [disabled]="!Formdata.valid"
+      class="p-button-outlined"
+    ></button>
+  </span>
+  </form>
+</div>
+<button
+  pButton
+  type="submit"
+  label="Show List"
+  (click)="display()"
+  class="p-button-outlined"
+></button>
+<div>
+  <p-table [value]="products" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email-ID</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+      <tr>
+        <td>{{ product.Fname }}</td>
+        <td>{{ product.Lname }}</td>
+        <td>{{ product.emailid }}</td>
+        <td>
+          <button style="height: 50px;width: 70px;"
+            pButton
+            type="submit"
+            label="Edit"
+            (click)="edit(product.id)"
+            class="p-button-outlined"
+          ></button>
+        </td>
+        <td>
+          <button style="height: 50px;width: 90px;"
+            pButton
+            type="submit"
+            label="Delete"
+            (click)="deleted(product.id)"
+            class="p-button-outlined"
+          ></button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

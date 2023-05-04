@@ -1,0 +1,51 @@
+.container{
+    border: 1px solid black;
+}
+.name{
+    display: inline-flex;
+    margin-top: 20px;
+    margin-left: 35px;
+}
+.page{
+    border: 1px solid green;
+    width: 700px;
+    height: 500px;
+    margin-top: -500px;
+}
+input{
+    width: 300px;
+}
+.table{
+    border: 1px solid green;
+    margin-left: 700px;
+    height: 500px;
+}
+.dropDown{
+    margin-top: 30px;
+    margin-left: 35px;
+}
+.gen{
+    margin-left: 20px;
+}
+.calender{
+    margin-left: 360px;
+    margin-top: -46px;
+}
+.contact{
+    margin-left: 35px;
+    margin-top: 30px;
+    display: flex;
+}
+.college{
+    margin-left: 18px;
+    margin-top: 30px;
+    display: flex;
+}
+button{
+    margin-left: 250px;
+    margin-top: 50px;
+    width: 200px;
+}
+.p-button.p-button-outlined2{
+ color: green;
+}

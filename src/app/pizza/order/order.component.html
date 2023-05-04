@@ -1,0 +1,20 @@
+<div class="container">
+  <h2>Welcome To Pizza App</h2>
+  <div class="new-order">
+    <p-fieldset  legend="New Order" [toggleable]="true" (click)="show()">
+        <div class="size">
+      <h3>Select your pizza size</h3>
+      <span class="p-buttonset p-button-success">
+        <button
+          pButton
+          type="button"
+          label="Small"
+          routerLink="/pizza/small"
+        ></button>
+        <button pButton type="button" label="Medium"></button>
+        <button pButton type="button" label="Large"></button>
+      </span>
+    </div>
+    </p-fieldset>
+  </div>
+</div>

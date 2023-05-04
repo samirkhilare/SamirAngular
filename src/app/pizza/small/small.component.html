@@ -1,0 +1,78 @@
+
+
+<div class="container">
+  <form [formGroup]="formdata" (ngSubmit)="submit()">
+  <div class="page">
+  <div class="size">
+  <span class="p-buttonset p-button-success">
+    <button
+      pButton
+      type="button"
+      label="Small"
+      routerLink="/pizza/small"
+    ></button>
+    <button pButton type="button"
+     label="Medium"
+     ></button>
+    <button pButton type="button"
+     label="Large"
+     ></button>
+  </span>
+</div>
+  <br><br>
+  <h3>Add Toppings</h3>
+  <div class="check">
+  
+  <div *ngFor="let topping of toppings; let i = index;">
+    <label for="">
+      <input type="checkbox" (change)="onchange($event)" class="form-check-input" [value]="topping">
+      {{topping}}
+    </label>
+  </div>
+</div>
+</div>
+
+<div class="details">
+  <h3 >
+    Customer Details
+  </h3>
+  <div class="c-detail">
+  
+    <span class="p-float-label">
+      <input type="text" id="inputtext" class="fullName"pInputText formControlName="fname" />
+      <label  for="inputtext">First Name</label>
+    </span>&nbsp;&nbsp;&nbsp;
+    <span class="p-float-label">
+      <input type="text" id="inputtext" class="lastName" pInputText formControlName="lname"/>
+      <label  for="inputtext">Last Name</label>
+    </span>&nbsp;&nbsp;&nbsp;
+    <span class="p-float-label">
+      <input type="text" id="inputtext" class="phoneNumber" pInputText formControlName="pnumber" />
+      <label  for="inputtext">Phone Number</label>
+    </span>
+  </div>
+  <h3>Delivery Address</h3>
+  <div class="d-details">
+    <span class="p-float-label">
+      <input type="text" id="inputtext" class="streetName"pInputText formControlName="street" />
+      <label  for="inputtext">Street</label>
+    </span>&nbsp;&nbsp;&nbsp;
+    <span class="p-float-label">
+      <input type="text" id="inputtext" class="lastName"pInputText formControlName="anumber" />
+      <label  for="inputtext">Apt. Number</label>
+    </span>&nbsp;&nbsp;&nbsp;
+    <span class="p-float-label">
+      <input type="text" id="inputtext" class="lastName"pInputText formControlName="city"  />
+      <label  for="inputtext">City</label>
+    </span>&nbsp;&nbsp;&nbsp;
+    <span class="p-float-label">
+      <input type="text" id="inputtext" class="lastName"pInputText formControlName="floor" />
+      <label  for="inputtext">Floor</label>
+    </span>
+  </div>
+<br>
+  <button pButton type="submit" label="Submit" class="p-button-outlined p-button-secondary"></button>
+
+</div>
+</form>
+</div>

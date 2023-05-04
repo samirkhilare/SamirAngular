@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="profile">
+    <div class="image"routerLink="/userinfo/details" style="border: solid black 1px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/236/236831.png" />
+    </div>
+    <div>
+      <h3>Samir Khilare</h3>
+      <p-fieldset legend="View Details" [toggleable]="true">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo cum
+        numquam, itaque animi suscipit aliquam earum sint consequuntur vitae.
+        Aperiam, repudiandae vitae! Possimus, ad similique!k
+      </p-fieldset>
+    </div>
+  </div>
+
+  <div class="page">
+    <h2 style="color: tomato;margin-left: 230px;">User Details</h2>
+    <br />
+    <div class="field col-12 md:col-4">
+      <span class="p-float-label">
+        <input type="text" id="inputtext" pInputText [(ngModel)]="value1" />
+        <label style="margin-left: 100px" for="inputtext">Full Name</label>
+      </span>
+    </div>
+    <br /><br />
+    <div class="field col-12 md:col-4 calender">
+      <span class="p-float-label">
+        <p-calendar
+          class=""
+          [(ngModel)]="date3"
+          [showIcon]="true"
+          inputId="icon"
+        ></p-calendar>
+        <label style="margin-left: 20px" for="inputtext">Your Birthday</label>
+      </span>
+    </div>
+
+    <p-dropdown
+      class="gender"
+      [options]="gender"
+      [(ngModel)]="selectedGen"
+      optionLabel="name"
+    ></p-dropdown
+    ><br /><br />
+    <p-dropdown
+      class="Country"
+      [options]="cities"
+      [(ngModel)]="selectedCity"
+      optionLabel="name"
+    ></p-dropdown
+    ><br /><br />
+    <div class="col-12 md:col-6 lg:col-4 mobile">
+      <span class="p-float-label">
+        <p-inputMask
+          mask="(+99) 999-999-99-99"
+          [(ngModel)]="val4"
+          placeholder="(+91) 99999-99999"
+        ></p-inputMask>
+        <label style="margin-left: 20px" for="inputtext">Mobile Number</label>
+      </span>
+    </div>
+    <br /><br />
+    <div class="col-12 md:col-6 lg:col-4 bio">
+      <span class="p-float-label">
+        <textarea
+          [rows]="1"
+          [cols]="50"
+          pInputTextarea
+          [autoResize]="true"
+        ></textarea>
+        <label style="margin-left: 20px" for="inputtext">Bio</label>
+      </span>
+    </div>
+    <button style="margin-left: 240px;margin-top: 50px;" pButton type="button" label="Submit" class="p-button-outlined"></button>
+
+
+  </div>
+</div>

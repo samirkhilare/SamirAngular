@@ -1,0 +1,61 @@
+<div class="container">
+  <form
+    [formGroup]="Formdata"
+    (ngSubmit)="onClickSubmit(Formdata.value)"
+    class="page"
+  >
+    <h2>Login Form</h2>
+    <span>
+      <div class="p-float-label">
+        <input
+          id="float-input"
+          name="emailid"
+          formControlName="emailid"
+          type="text"
+          pInputText
+        />
+        <label for="float-input">Email-ID</label>
+        <br />
+        <small *ngIf="email?.invalid && email?.touched"
+          ><span style="color: tomato">Invalid Email-ID</span></small
+        >
+      </div>
+      <span> </span>
+    </span>
+    <br /><br />
+    <div class="p-float-label">
+      <input
+        id="float-input"
+        formControlName="passwd"
+        type="password"
+        pInputText
+      />
+      <label for="float-input">Password</label>
+      <br />
+        <small *ngIf="password?.invalid && password?.touched"
+          ><span style="color: tomato">Invalid Password</span></small
+        >
+        <!-- <small *ngIf="password?.value === password2?.value"
+          ><span ><a routerLink="/form3"></a></span></small
+        > -->
+        
+    </div>
+    <br />
+    <button
+    (click)='macthpass()'
+      pButton
+      type="submit"
+      label="Submit"
+      [disabled]="!Formdata.valid"
+      class="p-button-outlined"
+    ></button><br><br>
+    <div class="error">
+    <small style="color: red;">{{Passmatch}}</small>
+  </div>
+  </form>
+</div>
+<div>
+  email id is : {{emailid}} <br>
+  Password is : {{passwd}} <br>
+
+</div>

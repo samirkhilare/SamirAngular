@@ -1,0 +1,31 @@
+{
+  "userdata": [
+    {
+      "Fname": "amol",
+      "Lname": "kolhe",
+      "emailid": "amolk@gmail.com",
+      "passwd": "samir",
+      "confpass": "samir",
+      "id": 2
+    },
+    {
+      "Fname": "sanket",
+      "Lname": "sarje",
+      "emailid": "sanket@gmail.com",
+      "passwd": "samir",
+      "confpass": "samir",
+      "id": 3
+    }
+  ],
+  "studentData": [],
+  "donationData": [
+    {
+      "fname": "sunny",
+      "email": "samir@gmail.com",
+      "mobile": "9689474327",
+      "amount": "1500",
+      "id": 1
+    }
+  ],
+  "pizzaData": []
+}
